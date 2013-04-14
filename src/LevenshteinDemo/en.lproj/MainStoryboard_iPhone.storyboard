@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="wSm-XR-xZ2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Table View Controller-->
+        <scene sceneID="b6p-SP-zJ9">
+            <objects>
+                <tableViewController id="wSm-XR-xZ2" customClass="DemoTableViewController" sceneMemberID="viewController">
+                    <connections>
+                        <outlet property="searchDisplayController" destination="XWh-Fy-bRB" id="lbq-NR-ErJ"/>
+                        <outlet property="tableView" destination="2DF-Wh-je8" id="cMK-6e-DQD"/>
+                        <outlet property="view" destination="zvT-cR-k5g" id="rBu-d0-q6C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khr-zR-NBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zvT-cR-k5g">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" id="h8w-LE-Wl6">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="wSm-XR-xZ2" id="NM9-Wo-3T6"/>
+                            </connections>
+                        </searchBar>
+                        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2DF-Wh-je8">
+                            <rect key="frame" x="0.0" y="44" width="320" height="548"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <prototypes>
+                                <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DefaultCell" textLabel="63u-gU-Df9" style="IBUITableViewCellStyleDefault" id="Q7N-dw-sYo">
+                                    <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="63u-gU-Df9">
+                                                <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </tableViewCell>
+                            </prototypes>
+                            <connections>
+                                <outlet property="dataSource" destination="wSm-XR-xZ2" id="Kti-iw-Y5I"/>
+                                <outlet property="delegate" destination="wSm-XR-xZ2" id="zoZ-QT-668"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <searchDisplayController id="XWh-Fy-bRB">
+                    <connections>
+                        <outlet property="delegate" destination="wSm-XR-xZ2" id="yf5-XB-qWw"/>
+                        <outlet property="searchBar" destination="h8w-LE-Wl6" id="7hu-KR-PjB"/>
+                        <outlet property="searchContentsController" destination="wSm-XR-xZ2" id="JsL-XB-dvh"/>
+                        <outlet property="searchResultsDataSource" destination="wSm-XR-xZ2" id="rGV-XY-PEI"/>
+                        <outlet property="searchResultsDelegate" destination="wSm-XR-xZ2" id="7iv-MK-5xm"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-20"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="DemoTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemoTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

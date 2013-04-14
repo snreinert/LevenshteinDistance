@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89EB2F6317120E74009ADE86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6217120E74009ADE86 /* UIKit.framework */; };
+		89EB2F6517120E74009ADE86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6417120E74009ADE86 /* Foundation.framework */; };
+		89EB2F6717120E74009ADE86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6617120E74009ADE86 /* CoreGraphics.framework */; };
+		89EB2F6D17120E74009ADE86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F6B17120E74009ADE86 /* InfoPlist.strings */; };
+		89EB2F6F17120E74009ADE86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F6E17120E74009ADE86 /* main.m */; };
+		89EB2F7317120E74009ADE86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F7217120E74009ADE86 /* AppDelegate.m */; };
+		89EB2F7517120E74009ADE86 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7417120E74009ADE86 /* Default.png */; };
+		89EB2F7717120E74009ADE86 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7617120E74009ADE86 /* Default@2x.png */; };
+		89EB2F7917120E74009ADE86 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7817120E74009ADE86 /* Default-568h@2x.png */; };
+		89EB2F7C17120E74009ADE86 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7A17120E74009ADE86 /* MainStoryboard_iPhone.storyboard */; };
+		89EB2F8217120E74009ADE86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8117120E74009ADE86 /* ViewController.m */; };
+		89EB2F8A1712101A009ADE86 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F891712101A009ADE86 /* DemoTableViewController.m */; };
+		89EB2F8D1712138C009ADE86 /* LevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8C1712138C009ADE86 /* LevenshteinDistance.m */; };
+		89EB2F90171213E2009ADE86 /* DistanceString.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8F171213E2009ADE86 /* DistanceString.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89EB2F5F17120E74009ADE86 /* LevenshteinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LevenshteinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89EB2F6217120E74009ADE86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89EB2F6417120E74009ADE86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		89EB2F6617120E74009ADE86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		89EB2F6A17120E74009ADE86 /* LevenshteinDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LevenshteinDemo-Info.plist"; sourceTree = "<group>"; };
+		89EB2F6C17120E74009ADE86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89EB2F6E17120E74009ADE86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89EB2F7017120E74009ADE86 /* LevenshteinDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LevenshteinDemo-Prefix.pch"; sourceTree = "<group>"; };
+		89EB2F7117120E74009ADE86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89EB2F7217120E74009ADE86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89EB2F7417120E74009ADE86 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		89EB2F7617120E74009ADE86 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		89EB2F7817120E74009ADE86 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		89EB2F7B17120E74009ADE86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		89EB2F8017120E74009ADE86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89EB2F8117120E74009ADE86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89EB2F881712101A009ADE86 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		89EB2F891712101A009ADE86 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		89EB2F8B1712138C009ADE86 /* LevenshteinDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevenshteinDistance.h; path = ../../LevenshteinDistance.h; sourceTree = "<group>"; };
+		89EB2F8C1712138C009ADE86 /* LevenshteinDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevenshteinDistance.m; path = ../../LevenshteinDistance.m; sourceTree = "<group>"; };
+		89EB2F8E171213E1009ADE86 /* DistanceString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceString.h; sourceTree = "<group>"; };
+		89EB2F8F171213E2009ADE86 /* DistanceString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceString.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89EB2F5C17120E74009ADE86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89EB2F6317120E74009ADE86 /* UIKit.framework in Frameworks */,
+				89EB2F6517120E74009ADE86 /* Foundation.framework in Frameworks */,
+				89EB2F6717120E74009ADE86 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89EB2F5617120E74009ADE86 = {
+			isa = PBXGroup;
+			children = (
+				89EB2F6817120E74009ADE86 /* LevenshteinDemo */,
+				89EB2F6117120E74009ADE86 /* Frameworks */,
+				89EB2F6017120E74009ADE86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89EB2F6017120E74009ADE86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89EB2F5F17120E74009ADE86 /* LevenshteinDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89EB2F6117120E74009ADE86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89EB2F6217120E74009ADE86 /* UIKit.framework */,
+				89EB2F6417120E74009ADE86 /* Foundation.framework */,
+				89EB2F6617120E74009ADE86 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89EB2F6817120E74009ADE86 /* LevenshteinDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89EB2F8B1712138C009ADE86 /* LevenshteinDistance.h */,
+				89EB2F8C1712138C009ADE86 /* LevenshteinDistance.m */,
+				89EB2F7117120E74009ADE86 /* AppDelegate.h */,
+				89EB2F7217120E74009ADE86 /* AppDelegate.m */,
+				89EB2F7A17120E74009ADE86 /* MainStoryboard_iPhone.storyboard */,
+				89EB2F8017120E74009ADE86 /* ViewController.h */,
+				89EB2F8117120E74009ADE86 /* ViewController.m */,
+				89EB2F6917120E74009ADE86 /* Supporting Files */,
+				89EB2F881712101A009ADE86 /* DemoTableViewController.h */,
+				89EB2F891712101A009ADE86 /* DemoTableViewController.m */,
+				89EB2F8E171213E1009ADE86 /* DistanceString.h */,
+				89EB2F8F171213E2009ADE86 /* DistanceString.m */,
+			);
+			path = LevenshteinDemo;
+			sourceTree = "<group>";
+		};
+		89EB2F6917120E74009ADE86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89EB2F6A17120E74009ADE86 /* LevenshteinDemo-Info.plist */,
+				89EB2F6B17120E74009ADE86 /* InfoPlist.strings */,
+				89EB2F6E17120E74009ADE86 /* main.m */,
+				89EB2F7017120E74009ADE86 /* LevenshteinDemo-Prefix.pch */,
+				89EB2F7417120E74009ADE86 /* Default.png */,
+				89EB2F7617120E74009ADE86 /* Default@2x.png */,
+				89EB2F7817120E74009ADE86 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89EB2F5E17120E74009ADE86 /* LevenshteinDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89EB2F8517120E74009ADE86 /* Build configuration list for PBXNativeTarget "LevenshteinDemo" */;
+			buildPhases = (
+				89EB2F5B17120E74009ADE86 /* Sources */,
+				89EB2F5C17120E74009ADE86 /* Frameworks */,
+				89EB2F5D17120E74009ADE86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LevenshteinDemo;
+			productName = LevenshteinDemo;
+			productReference = 89EB2F5F17120E74009ADE86 /* LevenshteinDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89EB2F5717120E74009ADE86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Steve Reinert";
+			};
+			buildConfigurationList = 89EB2F5A17120E74009ADE86 /* Build configuration list for PBXProject "LevenshteinDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 89EB2F5617120E74009ADE86;
+			productRefGroup = 89EB2F6017120E74009ADE86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89EB2F5E17120E74009ADE86 /* LevenshteinDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89EB2F5D17120E74009ADE86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89EB2F6D17120E74009ADE86 /* InfoPlist.strings in Resources */,
+				89EB2F7517120E74009ADE86 /* Default.png in Resources */,
+				89EB2F7717120E74009ADE86 /* Default@2x.png in Resources */,
+				89EB2F7917120E74009ADE86 /* Default-568h@2x.png in Resources */,
+				89EB2F7C17120E74009ADE86 /* MainStoryboard_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89EB2F5B17120E74009ADE86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89EB2F6F17120E74009ADE86 /* main.m in Sources */,
+				89EB2F7317120E74009ADE86 /* AppDelegate.m in Sources */,
+				89EB2F8217120E74009ADE86 /* ViewController.m in Sources */,
+				89EB2F8A1712101A009ADE86 /* DemoTableViewController.m in Sources */,
+				89EB2F8D1712138C009ADE86 /* LevenshteinDistance.m in Sources */,
+				89EB2F90171213E2009ADE86 /* DistanceString.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89EB2F6B17120E74009ADE86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89EB2F6C17120E74009ADE86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89EB2F7A17120E74009ADE86 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89EB2F7B17120E74009ADE86 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89EB2F8317120E74009ADE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89EB2F8417120E74009ADE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89EB2F8617120E74009ADE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevenshteinDemo/LevenshteinDemo-Prefix.pch";
+				INFOPLIST_FILE = "LevenshteinDemo/LevenshteinDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		89EB2F8717120E74009ADE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevenshteinDemo/LevenshteinDemo-Prefix.pch";
+				INFOPLIST_FILE = "LevenshteinDemo/LevenshteinDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89EB2F5A17120E74009ADE86 /* Build configuration list for PBXProject "LevenshteinDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89EB2F8317120E74009ADE86 /* Debug */,
+				89EB2F8417120E74009ADE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89EB2F8517120E74009ADE86 /* Build configuration list for PBXNativeTarget "LevenshteinDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89EB2F8617120E74009ADE86 /* Debug */,
+				89EB2F8717120E74009ADE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89EB2F5717120E74009ADE86 /* Project object */;
+}
