@@ -1,6 +1,6 @@
 /*
  * DemoTableViewController.m
- * Copyright 2013 Salt River Software, LLC
+ * Copyright 2013, 2017 Salt River Software, LLC
  *
  * Licensed under the Eclipse Public License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,27 +19,25 @@
 #import "DemoTableViewController.h"
 #import "LevenshteinDistance.h"
 #import "DistanceString.h"
+#import "SearchResultsTableViewController.h"
 
-@interface DemoTableViewController () {
-    NSArray *_dataSet;
-    NSMutableArray *_filteredData;
+@interface DemoTableViewController ()<UISearchControllerDelegate, UISearchBarDelegate> {
 }
 
 @property (nonatomic, retain) NSArray *dataSet;
 @property (nonatomic, retain) NSMutableArray *filteredData;
+@property (nonatomic) UISearchController *searchController;
 
 @end
 
 @implementation DemoTableViewController
-
-@synthesize tableView = _tableView;
 
 #pragma mark - Properties
 
 -(NSArray *) dataSet {
     if (_dataSet == nil) {
         
-        NSArray *rawPhrases = [NSArray arrayWithObjects:
+        _dataSet = [NSArray arrayWithObjects:
                                @"Ale",
                                @"Lager",
                                @"Stout",
@@ -72,30 +70,36 @@
                                @"Tripel Bier",
                                @"Lambik Bier", nil];
         
-        NSMutableArray *raw = [NSMutableArray arrayWithCapacity: [rawPhrases count]];
-        
-        for (NSString *s in rawPhrases) {
-            DistanceString *ds = [[DistanceString alloc] init];
-            
-            ds.phrase = s;
-            ds.value = 0; // uncalculated
-            [raw addObject: ds];
-        }
-        
-        _dataSet = [NSArray arrayWithArray: raw];
     }
     
     return _dataSet;
 }
 
-#pragma mark - Init
+#pragma mark - View Lifecycle
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-	self.filteredData = [NSMutableArray arrayWithCapacity: [self.dataSet count]];
+    SearchResultsTableViewController *stvc = [self.storyboard instantiateViewControllerWithIdentifier: @"SearchResultsTableView"];
+    stvc.dataSet = self.dataSet;
+    stvc.contextFrame = self.view.frame;
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController: stvc];
+    self.searchController.searchResultsUpdater = stvc;
+    self.searchController.delegate = self;
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame: self.searchController.searchBar.frame];
+    [self.tableView.tableHeaderView addSubview: self.searchController.searchBar];
+    
+    UISearchBar *sb = self.searchController.searchBar;
+    [sb sizeToFit];
+    sb.tintColor = [UIColor colorWithRed: 0.882 green: 0.400 blue: 0.333 alpha: 1];
+    sb.searchBarStyle = UISearchBarStyleMinimal;
+    sb.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,6 +107,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -113,104 +118,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ([self.searchDisplayController isActive]) {
-        return [self.filteredData count];
-    } else {
-        return [self.dataSet count];
-    }
-    
+    return [self.dataSet count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"DefaultCell";
+    static NSString *CellIdentifier = @"BeerCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
     // Configure the cell...
-    DistanceString *ds = nil;
-    if ([self.searchDisplayController isActive]) {
-        ds = [self.filteredData objectAtIndex: indexPath.row];
-    } else {
-        ds = [self.dataSet objectAtIndex: indexPath.row];
-    }
-    
-    cell.textLabel.text = ds.phrase;
+    cell.textLabel.text = self.dataSet[indexPath.row];
     
     return cell;
 }
 
+#pragma mark - UISearchBarDelegate
 
-NSComparisonResult (^compareDistanceStrings)(id obj1, id obj2) = ^(id obj1, id obj2){
-    DistanceString *de1 = (DistanceString *)obj1;
-    DistanceString *de2 = obj2;
-
-    if (de1.value < de2.value) {
-        return NSOrderedAscending;
-    } else if (de1.value > de2.value) {
-        return NSOrderedDescending;
-    } else {
-        return NSOrderedSame;
-    }
-    
-    return NSOrderedSame;
-};
-
-
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-	/*
-	 Update the filtered array based on the search text and scope.
-	 */
-	
-	[self.filteredData removeAllObjects]; // First clear the filtered array.
-	
-	/*
-	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
-	 */
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"phrase contains[cd] %@", searchText];
-    NSArray *filteredArray = [self.dataSet filteredArrayUsingPredicate: pred];
-    
-    // Create array of structures the size of the results list for sorting
-    NSMutableArray *weightedDistances = [[NSMutableArray alloc] initWithCapacity: [self.dataSet count]];
-    
-    // Calculate the levenshtein distance value for each word in the list to sort with
-    for (DistanceString *phraseB in filteredArray) {
-        float value = [LevenshteinDistance weightedDistance:searchText StringB: phraseB.phrase];
-        
-        phraseB.value = value;
-        [weightedDistances addObject: phraseB];
-    }
-    [weightedDistances sortUsingComparator: compareDistanceStrings];
-    
-    self.filteredData = weightedDistances;
-    
+-(UIBarPosition) positionForBar:(id<UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
 }
 
-#pragma mark -
-#pragma mark UISearchDisplayController Delegate Methods
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-	[self filterContentForSearchText:searchString scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
+-(void) willPresentSearchController:(UISearchController *)searchController {
+    [searchController.searchBar sizeToFit];
 }
-
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
-
 
 @end

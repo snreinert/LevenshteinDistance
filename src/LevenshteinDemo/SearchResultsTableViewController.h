@@ -1,6 +1,9 @@
 /*
- * ViewController.h
- * Copyright 2013 Salt River Software, LLC
+ *  SearchResultsTableViewController.h
+ *  LevenshteinDemo
+ *
+ *  Created by Steve Reinert on 4/3/17.
+ *  Copyright © 2017 Salt River Software, LLC. All rights reserved.
  *
  * Licensed under the Eclipse Public License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +18,12 @@
  * limitations under the License.
  *
  */
+
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SearchResultsTableViewController : UITableViewController<UISearchResultsUpdating>
+
+@property (nonatomic) NSArray *dataSet;
+@property (nonatomic) CGRect contextFrame;
 
 @end

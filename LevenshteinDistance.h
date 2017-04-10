@@ -1,7 +1,8 @@
 /*
- * LevenshteinDistance.h
- * Copyright 2013 Salt River Software, LLC
+ *  LevenshteinDistance.h
  *
+ *  Created by Steve Reinert on 3/3/13.
+ *  Copyright (c) 2013 Salt River Software. All rights reserved.
  * Licensed under the Eclipse Public License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,7 +14,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
  */
 
 #import <Foundation/Foundation.h>
@@ -24,21 +24,21 @@
  * Calculate the Levenshtein Distance between stringA and stringB.  Return
  * the raw (unweighted) value as defined by the Levenshtein Distance algorithm.
  */
-+(int) calcStringA:(NSString *) stringA StringB:(NSString *) stringB;
++(NSInteger) calcStringA:(NSString *) stringA StringB:(NSString *) stringB;
 
 /**
  * Calculate the Levenshtein Distance of two strings as a whole phrase instead of individual words separated by spaces.
  */
-+(int) valuePhraseA:(NSString *) stringA PhraseB:(NSString *) stringB;
++(NSInteger) valuePhraseA:(NSString *) stringA PhraseB:(NSString *) stringB;
 /**
  * Calculate the Levenshtein Distance of two strings as tokens, which are tokenized by locale.
  */
-+(int) valueWordsA:(NSString *) stringA WordB:(NSString *) stringB;
++(NSInteger) valueWordsA:(NSString *) stringA WordB:(NSString *) stringB;
 /**
  * Calculate the weighted value of a phrase, word, and length result of previous calculations.  The lengthValue is the
  * difference in length between string A and string B.
  */
-+(float) weightedValueForPhraseValue:(int) phrase wordValue:(int) wordValue lengthValue:(int) lengthValue;
++(float) weightedValueForPhraseValue:(NSInteger) phrase wordValue:(NSInteger) wordValue lengthValue:(NSInteger) lengthValue;
 
 /**
  * Return the weighted distance as an aggregate value.  Two calculations are performed: a phrase

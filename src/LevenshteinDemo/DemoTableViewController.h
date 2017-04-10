@@ -1,6 +1,6 @@
 /*
  * DemoTableViewController.h
- * Copyright 2013 Salt River Software, LLC
+ * Copyright 2013, 2017 Salt River Software, LLC
  *
  * Licensed under the Eclipse Public License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,10 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
-    UITableView *_tableView;
+@interface DemoTableViewController : UITableViewController {
 }
-
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end

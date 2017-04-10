@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89B56A001E934BB600C0A4F1 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B569FF1E934BB600C0A4F1 /* SearchResultsTableViewController.m */; };
+		89B56A031E93EDBA00C0A4F1 /* FilterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B56A021E93EDBA00C0A4F1 /* FilterOperation.m */; };
 		89EB2F6317120E74009ADE86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6217120E74009ADE86 /* UIKit.framework */; };
 		89EB2F6517120E74009ADE86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6417120E74009ADE86 /* Foundation.framework */; };
 		89EB2F6717120E74009ADE86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EB2F6617120E74009ADE86 /* CoreGraphics.framework */; };
@@ -17,13 +19,16 @@
 		89EB2F7717120E74009ADE86 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7617120E74009ADE86 /* Default@2x.png */; };
 		89EB2F7917120E74009ADE86 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7817120E74009ADE86 /* Default-568h@2x.png */; };
 		89EB2F7C17120E74009ADE86 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89EB2F7A17120E74009ADE86 /* MainStoryboard_iPhone.storyboard */; };
-		89EB2F8217120E74009ADE86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8117120E74009ADE86 /* ViewController.m */; };
 		89EB2F8A1712101A009ADE86 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F891712101A009ADE86 /* DemoTableViewController.m */; };
 		89EB2F8D1712138C009ADE86 /* LevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8C1712138C009ADE86 /* LevenshteinDistance.m */; };
 		89EB2F90171213E2009ADE86 /* DistanceString.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB2F8F171213E2009ADE86 /* DistanceString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89B569FE1E934BB600C0A4F1 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewController.h; sourceTree = "<group>"; };
+		89B569FF1E934BB600C0A4F1 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewController.m; sourceTree = "<group>"; };
+		89B56A011E93EDBA00C0A4F1 /* FilterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterOperation.h; sourceTree = SOURCE_ROOT; };
+		89B56A021E93EDBA00C0A4F1 /* FilterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterOperation.m; sourceTree = SOURCE_ROOT; };
 		89EB2F5F17120E74009ADE86 /* LevenshteinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LevenshteinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EB2F6217120E74009ADE86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89EB2F6417120E74009ADE86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,8 +43,6 @@
 		89EB2F7617120E74009ADE86 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		89EB2F7817120E74009ADE86 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		89EB2F7B17120E74009ADE86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		89EB2F8017120E74009ADE86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		89EB2F8117120E74009ADE86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		89EB2F881712101A009ADE86 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
 		89EB2F891712101A009ADE86 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 		89EB2F8B1712138C009ADE86 /* LevenshteinDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevenshteinDistance.h; path = ../../LevenshteinDistance.h; sourceTree = "<group>"; };
@@ -92,16 +95,18 @@
 		89EB2F6817120E74009ADE86 /* LevenshteinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				89B56A011E93EDBA00C0A4F1 /* FilterOperation.h */,
+				89B56A021E93EDBA00C0A4F1 /* FilterOperation.m */,
 				89EB2F8B1712138C009ADE86 /* LevenshteinDistance.h */,
 				89EB2F8C1712138C009ADE86 /* LevenshteinDistance.m */,
 				89EB2F7117120E74009ADE86 /* AppDelegate.h */,
 				89EB2F7217120E74009ADE86 /* AppDelegate.m */,
 				89EB2F7A17120E74009ADE86 /* MainStoryboard_iPhone.storyboard */,
-				89EB2F8017120E74009ADE86 /* ViewController.h */,
-				89EB2F8117120E74009ADE86 /* ViewController.m */,
 				89EB2F6917120E74009ADE86 /* Supporting Files */,
 				89EB2F881712101A009ADE86 /* DemoTableViewController.h */,
 				89EB2F891712101A009ADE86 /* DemoTableViewController.m */,
+				89B569FE1E934BB600C0A4F1 /* SearchResultsTableViewController.h */,
+				89B569FF1E934BB600C0A4F1 /* SearchResultsTableViewController.m */,
 				89EB2F8E171213E1009ADE86 /* DistanceString.h */,
 				89EB2F8F171213E2009ADE86 /* DistanceString.m */,
 			);
@@ -148,8 +153,13 @@
 		89EB2F5717120E74009ADE86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Steve Reinert";
+				TargetAttributes = {
+					89EB2F5E17120E74009ADE86 = {
+						DevelopmentTeam = XQ3RWE7TZQ;
+					};
+				};
 			};
 			buildConfigurationList = 89EB2F5A17120E74009ADE86 /* Build configuration list for PBXProject "LevenshteinDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -190,7 +200,8 @@
 			files = (
 				89EB2F6F17120E74009ADE86 /* main.m in Sources */,
 				89EB2F7317120E74009ADE86 /* AppDelegate.m in Sources */,
-				89EB2F8217120E74009ADE86 /* ViewController.m in Sources */,
+				89B56A031E93EDBA00C0A4F1 /* FilterOperation.m in Sources */,
+				89B56A001E934BB600C0A4F1 /* SearchResultsTableViewController.m in Sources */,
 				89EB2F8A1712101A009ADE86 /* DemoTableViewController.m in Sources */,
 				89EB2F8D1712138C009ADE86 /* LevenshteinDistance.m in Sources */,
 				89EB2F90171213E2009ADE86 /* DistanceString.m in Sources */,
@@ -226,25 +237,35 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -258,18 +279,27 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,9 +310,12 @@
 		89EB2F8617120E74009ADE86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQ3RWE7TZQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LevenshteinDemo/LevenshteinDemo-Prefix.pch";
 				INFOPLIST_FILE = "LevenshteinDemo/LevenshteinDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "Salt-River-Software--LLC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -291,9 +324,12 @@
 		89EB2F8717120E74009ADE86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQ3RWE7TZQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LevenshteinDemo/LevenshteinDemo-Prefix.pch";
 				INFOPLIST_FILE = "LevenshteinDemo/LevenshteinDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "Salt-River-Software--LLC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -318,6 +354,7 @@
 				89EB2F8717120E74009ADE86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
